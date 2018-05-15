@@ -1,0 +1,28 @@
+<div class="navbar-wagon">
+  <!-- Logo -->
+  <%= link_to root_path, class: "navbar-wagon-brand" do %>
+    <%= image_tag "logo.png", height: 50 %>
+  <% end %>
+
+  <!-- Right Navigation -->
+  <div class="navbar-wagon-right">
+
+    <!-- Links -->
+    <%= link_to "New Article", new_article_path, class: "navbar-wagon-item navbar-wagon-link" %>
+
+    <!-- Avatar with dropdown menu -->
+  </div>
+</div>
+<script>
+function initUpdateNavbarOnScroll() {
+  const navbar = document.querySelector('.navbar-wagon');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY >= window.innerHeight) {
+      navbar.classList.add('navbar-wagon-white');
+    } else {
+      navbar.classList.remove('navbar-wagon-white');
+    }
+  });
+}
+initUpdateNavbarOnScroll();
+</script>
